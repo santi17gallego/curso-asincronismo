@@ -8,13 +8,21 @@
 // catch para el reject
 // finally es cuando ya terminó, sin importar si es then o catch
 
+// hazAlgo()
+// .then(resultado => hazAlgoMas(resultado))
+// .then(nuevoResultado => hazLaTerceraCosa(nuevoResultado))
+// .then(resultadoFinal => {
+//   console.log(`Obtenido el resultado final: ${resultadoFinal}`);
+// })
+// .catch(falloCallback);
+
 const promise = new Promise(function (resolve, reject) {
     // Aquí va lo que requiera nuestro código
     resolve('Todo correcto')
 });
 
 
-const cows = 9;
+const cows = 11;
 
 const countCows = new Promise( function (resolve, reject) {
     if (cows > 10) {
@@ -24,10 +32,13 @@ const countCows = new Promise( function (resolve, reject) {
     }
 })
 
-countCows.then((result) => {
-    console.log(result);
-}).catch((error) => {
-    console.log(error);
-}).finally(() => {
-    console.log('Finally')
-});
+// countCows.then((result) => console.log(result))
+
+
+// countCows.then((result) => {
+//     console.log(result);
+// }).catch((error) => {
+//     console.log(error);
+// }).finally(() => {
+//     console.log('Finally')
+// });
